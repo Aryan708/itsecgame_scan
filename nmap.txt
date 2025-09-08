@@ -1,0 +1,30 @@
+# Nmap 7.93 scan initiated Sun Sep  7 17:50:22 2025 as: nmap -sV -sC -Pn -oN scan_results/nmap.txt itsecgames.com
+Nmap scan report for itsecgames.com (31.3.96.40)
+Host is up (0.23s latency).
+rDNS record for 31.3.96.40: web.mmebvba.com
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 6.7p1 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 cc27db28f485358db9a65f81933eef5a (DSA)
+|   2048 ba840f0a527ee8596fe75cd6e2b1b8c6 (RSA)
+|   256 9ed13d1f1926ea5d442d56588658895a (ECDSA)
+|_  256 5e12907b68ace2e25337d1b5ac3cdeaf (ED25519)
+80/tcp  open  http     Apache httpd
+|_http-server-header: Apache
+|_http-title: bWAPP, a buggy web application!
+443/tcp open  ssl/http Apache httpd
+| http-robots.txt: 36 disallowed entries (15 shown)
+| /includes/ /misc/ /modules/ /profiles/ /scripts/ 
+| /themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt 
+| /INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt 
+|_/LICENSE.txt /MAINTAINERS.txt
+| ssl-cert: Subject: commonName=mmebv.be
+| Subject Alternative Name: DNS:mmebv.be, DNS:mmebv.com, DNS:mmebvba.com, DNS:mmesec.be, DNS:mmesec.com, DNS:www.mmebv.be, DNS:www.mmebv.com, DNS:www.mmebvba.com, DNS:www.mmesec.be, DNS:www.mmesec.com
+| Not valid before: 2025-08-06T09:47:00
+|_Not valid after:  2025-11-04T09:46:59
+|_http-title: MME | Security Audits & Training
+|_http-generator: Drupal 7 (http://drupal.org)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Sep  7 17:52:10 2025 -- 1 IP address (1 host up) scanned in 108.31 seconds
